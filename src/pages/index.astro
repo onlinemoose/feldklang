@@ -9,7 +9,9 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 // import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Image from '~/components/common/Image.astro';
 import { getPermalink } from '~/utils/permalinks';
+import heroImage from '~/assets/images/human-dynamics-hero.png';
 import aboutPhoto from '~/assets/images/markus-smet.jpg';
 import workCounsellingImage from '~/assets/images/work_counselling.jpg';
 import groupSupervisionImage from '~/assets/images/group_supervision.jpg';
@@ -51,8 +53,23 @@ const metadata = {
     actions={[{ variant: 'primary', text: 'Book a call', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      Develop a version of you that really understands what's going on between people. Gain clarity on relationships,
-      dynamics, and organisational patterns that influence your performance at work.
+      <span class="hero-subtitle-text">
+        Develop a version of you that really understands what's going on between people. Gain clarity on relationships,
+        dynamics, and organisational patterns that influence your performance at work.
+      </span>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <Image
+        src={heroImage}
+        alt=""
+        loading="eager"
+        layout="fullWidth"
+        widths={[400, 768, 1145]}
+        sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, 1145px"
+        class="absolute inset-y-0 right-0 max-w-none opacity-30 dark:opacity-20"
+        style="width: auto; height: 100%; object-fit: contain; object-position: right center; mask-image: linear-gradient(to right, transparent, transparent 40%, black 75%); -webkit-mask-image: linear-gradient(to right, transparent, transparent 40%, black 75%);"
+      />
     </Fragment>
   </Hero>
 
@@ -369,3 +386,26 @@ const metadata = {
     </Fragment>
   </BlogLatestPosts>
 </Layout>
+
+<style>
+  /* On narrow screens the hero illustration is pinned to the right edge but
+     renders wider than the viewport, so it overflows to the left — the part
+     that's actually visible sits behind the full-width text column. The
+     bold title and the (already opaque) button hold up fine against it, but
+     the lighter-weight subtitle needs help. Rather than a full-width panel
+     behind the whole text block, this highlights just the subtitle's own
+     wrapped lines, so the title and button keep more of the image showing
+     through around them. Desktop already reads cleanly without this, so
+     it's scoped to mobile only. */
+  @media (max-width: 767px) {
+    :global(#hero .hero-subtitle-text) {
+      display: inline;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      background: var(--aw-color-bg-page);
+      background: color-mix(in srgb, var(--aw-color-bg-page) 85%, transparent);
+      border-radius: 0.4em;
+      padding: 0.2em 0.5em;
+    }
+  }
+</style>
