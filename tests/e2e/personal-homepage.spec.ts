@@ -11,8 +11,7 @@ test.describe('Personal Homepage Configuration', () => {
     const h1 = page.locator('main h1').first();
     await expect(h1).not.toContainText('Sarah Johnson');
 
-    // Assert tagline is visible AND does NOT contain "PERSONAL WEB DEMO"
-    const tagline = page.locator('[class*="tagline"], h2, h3').filter({ hasText: /tagline|demo/i });
+    // Assert tagline/headings are visible AND do NOT contain "PERSONAL WEB DEMO"
     const allHeadings = page.locator('h1, h2, h3, h4, h5, h6');
     for (const heading of await allHeadings.all()) {
       const text = await heading.textContent();
@@ -28,14 +27,12 @@ test.describe('Personal Homepage Configuration', () => {
   test('Test 2: Verify navigation links function correctly', async ({ page }) => {
     await page.goto('/');
 
-    // Assert page renders sections with IDs: about, projects, testimonials
+    // Assert page renders sections with IDs: about, services
     const aboutSection = page.locator('#about');
-    const projectsSection = page.locator('#projects');
-    const testimonialsSection = page.locator('#testimonials');
+    const servicesSection = page.locator('#services');
 
     await expect(aboutSection).toBeVisible();
-    await expect(projectsSection).toBeVisible();
-    await expect(testimonialsSection).toBeVisible();
+    await expect(servicesSection).toBeVisible();
 
     // Assert navigation contains links with following behaviour
     const nav = page.locator('header nav');
@@ -50,15 +47,10 @@ test.describe('Personal Homepage Configuration', () => {
     await expect(aboutLink).toBeVisible();
     await expect(aboutLink).toContainText('About');
 
-    // "Projects" link: href="#projects"
-    const projectsLink = nav.locator('a[href="#projects"]');
-    await expect(projectsLink).toBeVisible();
-    await expect(projectsLink).toContainText(/Projects|Portfolio/);
-
-    // "Testimonials" link: href="#testimonials"
-    const testimonialsLink = nav.locator('a[href="#testimonials"]');
-    await expect(testimonialsLink).toBeVisible();
-    await expect(testimonialsLink).toContainText('Testimonials');
+    // "Services" link: href="#services"
+    const servicesLink = nav.locator('a[href="#services"]');
+    await expect(servicesLink).toBeVisible();
+    await expect(servicesLink).toContainText('Services');
 
     // "Blog" link: href="/blog"
     const blogLink = nav.locator('a[href="/blog"]');
@@ -71,7 +63,7 @@ test.describe('Personal Homepage Configuration', () => {
 
     // Listen for console errors
     const consoleErrors: string[] = [];
-    page.on('console', msg => {
+    page.on('console', (msg) => {
       if (msg.type() === 'error') {
         consoleErrors.push(msg.text());
       }
@@ -79,7 +71,7 @@ test.describe('Personal Homepage Configuration', () => {
 
     // Listen for network errors
     const networkErrors: string[] = [];
-    page.on('response', response => {
+    page.on('response', (response) => {
       if (response.status() >= 400) {
         networkErrors.push(`${response.status()} ${response.url()}`);
       }
@@ -102,7 +94,7 @@ test.describe('Personal Homepage Configuration', () => {
         expect(consoleErrors).toEqual([]);
 
         // After each click, verify no network errors (404s, 500s)
-        const pageErrors = networkErrors.filter(error => error.includes('404') || error.includes('500'));
+        const pageErrors = networkErrors.filter((error) => error.includes('404') || error.includes('500'));
         expect(pageErrors).toEqual([]);
 
         // After each click, verify page remains functional (can still click other nav links)
