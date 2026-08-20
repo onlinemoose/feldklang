@@ -4,19 +4,23 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
+import Brands from '~/components/widgets/Brands.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 // import Features3 from '~/components/widgets/Features3.astro';
 // import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Image from '~/components/common/Image.astro';
-import { getPermalink } from '~/utils/permalinks';
 import heroImage from '~/assets/images/human-dynamics-hero.png';
 import aboutPhoto from '~/assets/images/markus-smet.jpg';
 import workCounsellingImage from '~/assets/images/work_counselling.jpg';
 import groupSupervisionImage from '~/assets/images/group_supervision.jpg';
 import organisationalDevelopmentImage from '~/assets/images/organisational_development.jpg';
 import organisationalDisturbanceImage from '~/assets/images/organisational_disturbance.jpg';
+import yellLogo from '~/assets/images/logos/yell.svg';
+import skyLogo from '~/assets/images/logos/sky.svg';
+import brandwatchLogo from '~/assets/images/logos/brandwatch.png';
+import ipuBerlinLogo from '~/assets/images/logos/ipu-berlin.svg';
 
 const metadata = {
   title: 'Feldklang - Markus Smet Psychoanalytic Leadership & Organisational Development',
@@ -29,7 +33,6 @@ const metadata = {
     <Header
       links={[
         { text: 'Home', href: '/' },
-        { text: 'About', href: '#about' },
         { text: 'Services', href: '#services' },
         // { text: 'Testimonials', href: '#testimonials' },
         { text: 'Blog', href: '/blog' },
@@ -48,15 +51,12 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="What's really going on?"
+    title="Build An Ambitous Mindset"
     tagline=""
-    actions={[{ variant: 'primary', text: 'Book a call', href: getPermalink('/contact#form') }]}
+    actions={[{ variant: 'primary', text: 'Why?', href: '#mindset' }]}
   >
     <Fragment slot="subtitle">
-      <span class="hero-subtitle-text">
-        Develop a version of you that really understands what's going on between people. Gain clarity on relationships,
-        dynamics, and organisational patterns that influence your performance at work.
-      </span>
+      <span class="hero-subtitle-text"> Get ahead. Attend to the <i>psychology</i> of ambitious work. </span>
     </Fragment>
 
     <Fragment slot="bg">
@@ -76,7 +76,7 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
-    id="about"
+    id="mindset"
     image={{
       src: aboutPhoto,
       alt: 'Image of Markus Smet',
@@ -84,18 +84,15 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Does Mindset Matter?</h2>
       <p>
-        I've created conditions where people stopped defending and upped their performance. Clarity became irreversible,
-        people couldn't retreat into comfortable illusions and were inspired to let go of defences so old patterns
-        didn't contaminate the work.
+        Over time I noticed my greatest career successes were not about the tangible processes, structures or strategy.
+        Yes, they were important. No, they were not differentiating.
       </p>
       <br />
       <p>
-        Once people taste genuine clarity and real collaboration, they don't accept less. They've seen what's possible.
-        Over the last years I've studied psychology to get underneath what made this possible—how groups actually
-        function, what enables or blocks performance, what creates the relational foundation that makes everything else
-        work.
+        Success, and failure, occured because of the human dynamics: the willingness to challenge constructively, to
+        collaborate, trust each other and work through conflict authentically in the pursuit of organisational goals.
       </p>
       <br />
       <p>
@@ -109,6 +106,19 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Organisations I've Worked With"
+    icons={[]}
+    images={[
+      { src: yellLogo, alt: 'Yell' },
+      { src: skyLogo, alt: 'Sky' },
+      { src: brandwatchLogo, alt: 'Brandwatch', height: 60 },
+      { src: ipuBerlinLogo, alt: 'International Psychoanalytic University Berlin' },
+    ]}
+  />
+
   <!-- Steps Widget ****************** -->
 
   <Steps
@@ -117,7 +127,7 @@ const metadata = {
     items={[
       {
         title:
-          'Psychoanalyst Training <br /> <span class="font-normal">Personal & Psychoanalytic Studies (Part-Time)</span> <br /> <span class="text-sm font-normal">7 years</span>',
+          'Psychological Training <br /> <span class="font-normal">Personal & Psychoanalytic Studies (Part-Time)</span> <br /> <span class="text-sm font-normal">7 years</span>',
         description: `A combination of extended group work, individual analysis, and academic study to understand human behavior and unconscious processes.`,
         icon: 'tabler:school',
       },
@@ -144,7 +154,7 @@ const metadata = {
     title="Education"
     items={[
       {
-        title: `Master of Arts Psychoanalytic Leadership & Consulting<br /> <span class="font-normal">Berlin's International Psychoanalytic University</span> <br /> <span class="text-sm font-normal">2024 - 2026</span>`,
+        title: `Master of Arts Psychoanalytic Leadership & Consulting<br /> <span class="font-normal">Berlin's International Psychoanalytic University</span> <br /> <span class="text-sm font-normal">2024 - 2027</span>`,
         icon: 'tabler:school',
       },
       {
@@ -160,36 +170,36 @@ const metadata = {
   <Content
     id="services"
     title="Services"
-    subtitle="How I can help you and your organisation"
+    subtitle="Organisational consulting attending to the mindset of ambitious work"
     isReversed
     items={[
       {
         title: 'Why Do It:',
         icon: 'tabler:user',
-        description: 'Work relationships are strained and you want to understand why.',
+        description: 'Leading is complex, driving change and innovation is even more so. To be ambitious, you need to understand the psychology of your team and yourself.',
       },
       {
         title: 'How It Works:',
         icon: 'tabler:settings-question',
         description:
-          "To find your agency we explore not just what others are doing but also your role in challenges. Whether its your boss, a team that won't follow or a stakeholder dynamic that is strained. Gentle but honest exploration of topics and feelings, a trusted space for you to find thoughts you haven't found words for until now. In time what lies beneath will emerge and we will find concrete actions worth taking.",
+          "To leverage potential in you and your team, we explore not just what others are doing but also your impact on team ambition. Gentle but honest exploration, room for you to find thoughts you haven't found words for until now. The reasons for hesitation or resistance will emerge and we will find concrete actions worth taking.",
       },
       {
         title: 'Format:',
         icon: 'tabler:question-mark',
         description:
-          'One to one sessions, 60 minutes every 2 weeks to give time for thoughts to digest. Can be in person or remote depending on location.',
+          'One to one sessions, 60 minutes every 2-4 weeks to give time for thoughts to digest. Can be in person or remote depending on location.',
       },
     ]}
     image={{
       src: workCounsellingImage,
-      alt: 'Profession Counselling',
+      alt: 'Coaching and Counselling',
     }}
     imageClasses="image-blur-diagonal"
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Profession Counselling<br /><span class="text-2xl">Navigating Work Challenges</span>
+        Leadership Coaching<br /><span class="text-2xl">For Leading Ambitiously</span>
       </h3>
     </Fragment>
 
@@ -207,13 +217,14 @@ const metadata = {
       {
         title: 'Why Do It:',
         icon: 'tabler:user',
-        description: 'Learn from professional peers about your role and build more effective behaviour patterns.',
+        description:
+          'To create performance and build trust. Learn to speak plainly, collaborate better and develop more effective behavioural patterns in your team.',
       },
       {
         title: 'How It Works:',
         icon: 'tabler:settings-question',
         description:
-          'One person brings a challenging case from their work—something difficult with their team, their boss, or organisational dynamics. The group discusses it, observes, and proposes how to proceed. What emerges reveals as much about those responding as the person who brought the case. How we work with each other in these sessions gets reflected on and discussed, making our patterns more conscious.',
+          'Supervising a group means attending to the inter-personal dynamics so that learning from each other accelerates through constructive conflict, courage and inter-personal trust.',
       },
       {
         title: 'Format:',
@@ -224,13 +235,13 @@ const metadata = {
     ]}
     image={{
       src: groupSupervisionImage,
-      alt: 'Profession Group Supervision',
+      alt: 'Supervision',
     }}
     imageClasses="image-blur-diagonal"
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Profession Group Supervision<br /><span class="text-2xl">Nurturing More Impact In Your Role</span>
+        Supervision<br /><span class="text-2xl">Activate Teams So They Work Well</span>
       </h3>
     </Fragment>
 
@@ -249,13 +260,13 @@ const metadata = {
         title: 'Why Do It:',
         icon: 'tabler:user',
         description:
-          "You and your leadership set direction but execution doesn't follow; reduce what's undermining those decisions.",
+          'Proactively preempt problems, set up teams to work well together and build up a healthy organisational mindset.',
       },
       {
         title: 'How It Works:',
         icon: 'tabler:settings-question',
         description:
-          'We explore not just what others are doing but also your role in challenges. Using interviews and observing key meetings, anxiety, defensive patterns, and avoidance between teams, individuals, and leaders becomes visible. I examine whether company goals are actually clear to employees and whether stated values are genuinely upheld. Once dynamics are identified, individual counselling, conflict mediation, and group work can help move teams forward.',
+          'With interviews and observing the organisation at work patterns of anxiety, defenciveness and avoidance between teams, individuals, and leaders becomes visible. Combined with Supervision and Coaching, we can clarify company goals and see how values are upheld in teams.',
       },
       {
         title: 'Format:',
@@ -266,13 +277,13 @@ const metadata = {
     ]}
     image={{
       src: organisationalDevelopmentImage,
-      alt: 'Leading Organisational Development',
+      alt: 'Organisational Development',
     }}
     imageClasses="image-blur-diagonal-line"
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Leading Organisational Development<br /><span class="text-2xl">Build Organisational Competence</span>
+        Organisational Development<br /><span class="text-2xl">Growing Organisational Ambition</span>
       </h3>
     </Fragment>
 
@@ -306,13 +317,13 @@ const metadata = {
     ]}
     image={{
       src: organisationalDisturbanceImage,
-      alt: 'Leading Customer First',
+      alt: 'Customer Led Innovation',
     }}
     imageClasses="image-blur-diagonal"
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Leading Customer First<br /><span class="text-2xl">Bring the outside-in to the Organisation</span>
+        Customer-Led Innovation<br /><span class="text-2xl">Bring the outside-in to the Organisation</span>
       </h3>
     </Fragment>
 
@@ -363,8 +374,8 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Find Out What's Really Going On"
-    subtitle="If you sense something's wrong but can't quite name it, let's talk."
+    title="Build An Ambitious Mindset"
+    subtitle="For a mindset that goes beyond normal, let's talk."
     actions={[
       {
         variant: 'primary',
@@ -406,6 +417,20 @@ const metadata = {
       background: color-mix(in srgb, var(--aw-color-bg-page) 85%, transparent);
       border-radius: 0.4em;
       padding: 0.2em 0.5em;
+    }
+  }
+
+  /* A little extra breathing room in the hero specifically on the homepage,
+     without changing the Hero widget's default height on every other page
+     that uses it. */
+  :global(#hero .py-12) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  @media (min-width: 768px) {
+    :global(#hero .py-12) {
+      padding-top: 6.5rem;
+      padding-bottom: 6.5rem;
     }
   }
 </style>
