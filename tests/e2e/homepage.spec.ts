@@ -3,7 +3,7 @@ import { test, expect } from './fixtures';
 test.describe('Homepage', () => {
   test('should load homepage without errors', async ({ page }) => {
     await page.goto('/');
-    await expect(page).toHaveTitle(/.*HomePage|AstroWind.*/);
+    await expect(page).toHaveTitle(/Feldklang/);
   });
 
   test('should have visible header', async ({ page }) => {
