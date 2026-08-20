@@ -89,8 +89,10 @@ export interface MetaDataTwitter {
 }
 
 export interface Image {
-  src: string;
+  src: string | ImageMetadata;
   alt?: string;
+  /** Optional display height override in pixels (width still scales automatically to match). */
+  height?: number;
 }
 
 export interface Video {
