@@ -1,0 +1,15 @@
+# Project TODO List
+
+This file is for local notes and tasks. It's ignored by Git.
+
+## Future Tasks
+
+- Integrate a calendar booking solution
+
+## Ideas
+
+-
+
+## Notes
+
+-
