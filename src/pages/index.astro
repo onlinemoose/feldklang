@@ -9,8 +9,10 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 // import Features3 from '~/components/widgets/Features3.astro';
 // import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
 import heroImage from '~/assets/images/human-dynamics-hero.png';
 import aboutPhoto from '~/assets/images/markus-smet.jpg';
 import workCounsellingImage from '~/assets/images/work_counselling.jpg';
@@ -87,19 +89,21 @@ const metadata = {
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Does Mindset Matter?</h2>
       <p>
         Over time I noticed my greatest career successes were not about the tangible processes, structures or strategy.
-        Yes, they were important. No, they were not differentiating.
       </p>
       <br />
       <p>
-        Success, and failure, occured because of the human dynamics: the willingness to challenge constructively, to
-        collaborate, trust each other and work through conflict authentically in the pursuit of organisational goals.
+        Success, and failure, amplifies when the dynamics between people work well, or poorly.
       </p>
       <br />
-      <p>
-        That direct experience convinced me <i>people are the biggest lever for exceptional performance</i>. So after
-        20 years developing teams, I studied organisational psychology and psychoanalysis to understand the 
-        unconscious processes that drive human behaviour and organisational dynamics.
+      <p class="mb-6">
+        So shaping <b><i>people's experience of work</i></b> became my focus
+        because I wanted to know how this worked, and how to do it better.
       </p>
+      <div class="max-w-xs sm:max-w-md mx-auto md:mx-0 flex flex-nowrap flex-col sm:flex-row justify-center md:justify-start">
+        <div class="flex w-full sm:w-auto">
+          <Button variant="primary" text="How?" href="#how" class="w-full sm:mb-0" />
+        </div>
+      </div>
     </Fragment>
 
     <Fragment slot="bg">
@@ -164,6 +168,38 @@ const metadata = {
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="how"
+    title="How To Shape People's Experience of Work"
+    subtitle="You do the below already, it's realising these things take longer and reach deeper than expected. And knowing of all the things you might do, it is these areas that changes a solid team into an ambitious one."
+    tagline="Ambition"
+    columns={4}
+    items={[
+      {
+        title: 'Align On Primary Task',
+        description: 'Clarity takes much longer than expected, early ideas and KPIs are often wrong. Keep the primary task in dialogue, this is not a one-time exercise.',
+        icon: 'tabler:target-arrow',
+      },
+      {
+        title: 'Entrust Role Holders',
+        description: 'A holder must mentally inhabit a profession, separate from their personal identity, and roles are equally supported by the team.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Uphold Authentic Values',
+        description: 'Authentic values encourage constructive behaviour that neither avoids nor threatens, to help people process the tension of ambition.',
+        icon: 'tabler:scale',
+      },
+      {
+        title: 'Be A Brave Leader',
+        description: 'Leaders are on the same page helping to lower defensive behaviours and power is used to shape clarity and set constraints.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
   />
 
   <!-- Content Widget **************** Service 1 -->
@@ -242,7 +278,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Supervision<br /><span class="text-2xl">Activate Teams So They Work Well</span>
+        Supervision<br /><span class="text-2xl">Activate Teams So They Come Together</span>
       </h3>
     </Fragment>
 
