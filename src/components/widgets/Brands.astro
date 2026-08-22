@@ -28,7 +28,7 @@ const {
         images.map(
           (image) =>
             image.src && (
-              <div class="flex justify-center items-center col-span-1 my-2 lg:my-4 py-1 px-3 rounded-md dark:bg-gray-200">
+              <div class="flex justify-center items-center col-span-1 my-2 lg:my-4 py-1 px-3">
                 <Image
                   src={image.src}
                   alt={image.alt || ''}
@@ -36,7 +36,7 @@ const {
                   height={image.height || 48}
                   layout="fixed"
                   style="width: auto; object-fit: contain;"
-                  class="w-auto"
+                  class="w-auto dark:grayscale dark:invert dark:opacity-80"
                 />
               </div>
             )

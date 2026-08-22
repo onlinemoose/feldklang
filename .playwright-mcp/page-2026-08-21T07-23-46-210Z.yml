@@ -1,0 +1,201 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Feldklang Logo" [ref=e7]
+      - navigation "Main navigation" [ref=e8]:
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Home" [ref=e11] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e12]:
+            - link "Services" [ref=e13] [cursor=pointer]:
+              - /url: "#services"
+          - listitem [ref=e14]:
+            - link "Blog" [ref=e15] [cursor=pointer]:
+              - /url: /blog
+      - link "Book a call" [ref=e19] [cursor=pointer]:
+        - /url: "#"
+  - main [ref=e20]:
+    - generic [ref=e24]:
+      - heading "Build An Ambitous Mindset" [level=1] [ref=e25]
+      - generic [ref=e26]:
+        - paragraph [ref=e27]:
+          - generic [ref=e28]: Get ahead. Attend to the psychology of ambitious work.
+        - link "Why?" [ref=e31] [cursor=pointer]:
+          - /url: "#mindset"
+    - generic [ref=e37]:
+      - heading "Why Does Mindset Matter?" [level=2] [ref=e38]
+      - paragraph [ref=e39]: Over time I noticed my greatest career successes were not about the tangible processes, structures or strategy. Yes, they were important. No, they were not differentiating.
+      - paragraph [ref=e40]: "Success, and failure, occured because of the human dynamics: the willingness to challenge constructively, to collaborate, trust each other and work through conflict authentically in the pursuit of organisational goals."
+      - paragraph [ref=e41]: That direct experience convinced me people are the biggest lever for exceptional performance. So after 20 years developing teams, I studied organisational psychology and psychoanalysis to understand the unconscious processes that drive human behaviour and organisational dynamics.
+    - generic [ref=e46]:
+      - heading "Organisations I've Worked With" [level=2] [ref=e48]
+      - generic [ref=e49]:
+        - img "Yell" [ref=e51]
+        - img "Sky" [ref=e53]
+        - img "Brandwatch" [ref=e55]
+        - img "International Psychoanalytic University Berlin" [ref=e57]
+    - generic [ref=e61]:
+      - heading "Work experience" [level=2] [ref=e63]
+      - generic [ref=e64]:
+        - generic [ref=e72]:
+          - paragraph [ref=e73]: Psychological Training Personal & Psychoanalytic Studies (Part-Time) 7 years
+          - paragraph [ref=e74]: A combination of extended group work, individual analysis, and academic study to understand human behavior and unconscious processes.
+        - generic [ref=e82]:
+          - paragraph [ref=e83]: Supervisory Board Member Subject:Resoul Organisational Development Consultancy 6 years
+          - paragraph [ref=e84]: Supporting an award winning organisational development consultancy in a supervisory role.
+        - generic [ref=e91]:
+          - paragraph [ref=e92]: Board Level Leader Spreadshirt, Flaconi, Brandwatch, Ninox 12 years
+          - paragraph [ref=e93]: Led Product and Design teams at multiple high-growth tech companies through significant scaling phases. Managing teams of up to 25 people. Overseeing product strategy, establishing agile, design, research and product operations.
+    - generic [ref=e97]:
+      - heading "Education" [level=2] [ref=e99]
+      - generic [ref=e100]:
+        - paragraph [ref=e109]: Master of Arts Psychoanalytic Leadership & Consulting Berlin's International Psychoanalytic University 2024 - 2027
+        - paragraph [ref=e117]: Bachelor of Arts with Honours International Business Studies Leeds' Metropolitan University 1991 - 1995
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - paragraph [ref=e121]: Services
+        - heading "Four Ways I Can Help" [level=2] [ref=e122]
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - generic [ref=e127]: Leadership Coaching
+          - paragraph [ref=e128]: For leading ambitiously, one to one.
+        - generic [ref=e129]:
+          - generic [ref=e132]: Supervision
+          - paragraph [ref=e133]: Activate teams so they work well together.
+        - generic [ref=e134]:
+          - generic [ref=e137]: Organisational Development
+          - paragraph [ref=e138]: Growing a healthy organisational mindset.
+        - generic [ref=e139]:
+          - generic [ref=e142]: Customer-Led Innovation
+          - paragraph [ref=e143]: Bring the outside-in to the organisation.
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - heading "Services" [level=2] [ref=e147]
+        - paragraph [ref=e148]: Organisational consulting attending to the mindset of ambitious work
+      - generic [ref=e151]:
+        - heading "Leadership Coaching For Leading Ambitiously" [level=3] [ref=e153]: Leadership CoachingFor Leading Ambitiously
+        - generic [ref=e154]:
+          - generic [ref=e160]:
+            - heading "Why Do It:" [level=3] [ref=e161]
+            - paragraph [ref=e162]: Leading is complex, driving change and innovation is even more so. To be ambitious, you need to understand the psychology of your team and yourself.
+          - generic [ref=e168]:
+            - heading "How It Works:" [level=3] [ref=e169]
+            - paragraph [ref=e170]: To leverage potential in you and your team, we explore not just what others are doing but also your impact on team ambition. Gentle but honest exploration, room for you to find thoughts you haven't found words for until now. The reasons for hesitation or resistance will emerge and we will find concrete actions worth taking.
+          - generic [ref=e176]:
+            - heading "Format:" [level=3] [ref=e177]
+            - paragraph [ref=e178]: One to one sessions, 60 minutes every 2-4 weeks to give time for thoughts to digest. Can be in person or remote depending on location.
+    - generic [ref=e186]:
+      - heading "Supervision Activate Teams So They Work Well" [level=3] [ref=e188]: SupervisionActivate Teams So They Work Well
+      - generic [ref=e189]:
+        - generic [ref=e195]:
+          - heading "Why Do It:" [level=3] [ref=e196]
+          - paragraph [ref=e197]: To create performance and build trust. Learn to speak plainly, collaborate better and develop more effective behavioural patterns in your team.
+        - generic [ref=e203]:
+          - heading "How It Works:" [level=3] [ref=e204]
+          - paragraph [ref=e205]: Supervising a group means attending to the inter-personal dynamics so that learning from each other accelerates through constructive conflict, courage and inter-personal trust.
+        - generic [ref=e211]:
+          - heading "Format:" [level=3] [ref=e212]
+          - paragraph [ref=e213]: Typically conducted in small groups with others facing similar demands. Commitment to 6 sessions over 6 months builds trust. You learn from each other's experience whilst developing genuine insight into your own practice.
+    - generic [ref=e221]:
+      - heading "Organisational Development Growing Organisational Ambition" [level=3] [ref=e223]: Organisational DevelopmentGrowing Organisational Ambition
+      - generic [ref=e224]:
+        - generic [ref=e230]:
+          - heading "Why Do It:" [level=3] [ref=e231]
+          - paragraph [ref=e232]: Proactively preempt problems, set up teams to work well together and build up a healthy organisational mindset.
+        - generic [ref=e238]:
+          - heading "How It Works:" [level=3] [ref=e239]
+          - paragraph [ref=e240]: With interviews and observing the organisation at work patterns of anxiety, defenciveness and avoidance between teams, individuals, and leaders becomes visible. Combined with Supervision and Coaching, we can clarify company goals and see how values are upheld in teams.
+        - generic [ref=e246]:
+          - heading "Format:" [level=3] [ref=e247]
+          - paragraph [ref=e248]: 3 month engagement with 4 days p/month, starts with a 1 week assessment where initial issues are shared and focus is prioritised.
+    - generic [ref=e256]:
+      - heading "Customer-Led Innovation Bring the outside-in to the Organisation" [level=3] [ref=e258]: Customer-Led InnovationBring the outside-in to the Organisation
+      - generic [ref=e259]:
+        - generic [ref=e265]:
+          - heading "Why Do It:" [level=3] [ref=e266]
+          - paragraph [ref=e267]: Leaders seeking unwelcome customer truths to challenge and evolve the organisation.
+        - generic [ref=e273]:
+          - heading "How It Works:" [level=3] [ref=e274]
+          - paragraph [ref=e275]: Individual and leadership team coaching to uncover risks and establish a clear goal. Build clear responsibilities to identify customer problems and bring them into the organisation. Provide group supervision for the team as they question established practice and push back on comfortable assumptions.
+        - generic [ref=e281]:
+          - heading "Format:" [level=3] [ref=e282]
+          - paragraph [ref=e283]: Initially onsite, follow up work and supervision possible remotely.
+    - generic [ref=e289]:
+      - generic [ref=e290]:
+        - heading "Build An Ambitious Mindset" [level=2] [ref=e291]
+        - paragraph [ref=e292]: For a mindset that goes beyond normal, let's talk.
+      - link "Book a call" [ref=e295] [cursor=pointer]:
+        - /url: /
+    - generic [ref=e297]:
+      - generic [ref=e298]:
+        - generic [ref=e299]:
+          - heading "Explore insightful articles on my blog" [level=2] [ref=e300]
+          - link "View all posts »" [ref=e301] [cursor=pointer]:
+            - /url: /blog
+        - paragraph [ref=e302]: Dive into articles making psychoanalysis accessible, where you'll find invaluable insights, practical advice, and captivating narratives that reveal the power of unconscious processes.
+      - generic [ref=e303]:
+        - article [ref=e304]:
+          - link [ref=e306] [cursor=pointer]:
+            - /url: /what-if-nokia-took-a-different-path
+            - img "What If? Stephen Elop Had Taken Nokia Down A Different Path" [ref=e307]
+          - heading [level=3] [ref=e308]:
+            - link "What If? Stephen Elop Had Taken Nokia Down A Different Path" [ref=e309] [cursor=pointer]:
+              - /url: /what-if-nokia-took-a-different-path
+          - paragraph [ref=e310]: A fictional, fun and hopeful retelling of how Nokia was saved, grounded in what actually happened. Here Stephen Elop, Nokia's newly minted CEO, sets a different course and instead of killing Nokia, he saves the company.
+        - article [ref=e311]:
+          - link [ref=e313] [cursor=pointer]:
+            - /url: /landing
+            - 'img "Mastering Landing Pages: Practical Guide for 2023" [ref=e314]'
+          - heading [level=3] [ref=e315]:
+            - 'link "Mastering Landing Pages: Practical Guide for 2023" [ref=e316] [cursor=pointer]':
+              - /url: /landing
+          - paragraph [ref=e317]: Ever clicked on an ad and found yourself on a page that seemed to really want you to do something? Congratulations, you've landed on a Landing Page!
+        - article [ref=e318]:
+          - heading [level=3] [ref=e320]:
+            - link "Markdown elements demo post" [ref=e321] [cursor=pointer]:
+              - /url: /markdown-elements-demo-post
+          - paragraph [ref=e322]: Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor.
+  - contentinfo [ref=e323]:
+    - generic [ref=e324]:
+      - generic [ref=e325]:
+        - generic [ref=e326]:
+          - link "Feldklang" [ref=e328] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e329]:
+            - link "Terms" [ref=e330] [cursor=pointer]:
+              - /url: /terms
+            - text: ·
+            - link "Privacy Policy" [ref=e331] [cursor=pointer]:
+              - /url: /privacy
+        - generic [ref=e332]:
+          - generic [ref=e333]: Services
+          - list [ref=e334]:
+            - listitem [ref=e335]:
+              - link "Services" [ref=e336] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e337]:
+          - generic [ref=e338]: Company
+          - list [ref=e339]:
+            - listitem [ref=e340]:
+              - link "About" [ref=e341] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e342]:
+              - link "Blog" [ref=e343] [cursor=pointer]:
+                - /url: /blog
+      - generic [ref=e344]:
+        - list [ref=e345]:
+          - listitem [ref=e346]:
+            - link "LinkedIn" [ref=e347] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e350]:
+            - link "RSS" [ref=e351] [cursor=pointer]:
+              - /url: /rss.xml
+        - generic [ref=e354]: Made by Markus Smet · All rights reserved.
+  - generic [ref=e357]:
+    - button [ref=e358]
+    - button [ref=e364]
+    - button [ref=e368]
+    - button [ref=e376]

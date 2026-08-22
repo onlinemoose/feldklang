@@ -1,3 +1,4 @@
+import colors from 'tailwindcss/colors';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 import typographyPlugin from '@tailwindcss/typography';
@@ -12,6 +13,12 @@ export default {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        // Components across the template hardcode `dark:*-slate-*` as their
+        // dark-mode neutral (text, borders, card backgrounds). Rather than
+        // patch every occurrence, alias the slate scale itself to Tailwind's
+        // warm `stone` scale so every existing `slate-*` class renders in
+        // the brand's warm dark palette instead of cool blue-gray.
+        slate: colors.stone,
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
