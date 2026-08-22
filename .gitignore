@@ -28,4 +28,5 @@ playwright-report/
 test-results/
 
 # local notes
-TODO.txt.playwright-mcp/
+TODO.txt
+.playwright-mcp/
