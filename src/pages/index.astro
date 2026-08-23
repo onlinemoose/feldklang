@@ -8,7 +8,6 @@ import Brands from '~/components/widgets/Brands.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 // import Features3 from '~/components/widgets/Features3.astro';
 // import Testimonials from '~/components/widgets/Testimonials.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Image from '~/components/common/Image.astro';
@@ -35,6 +34,7 @@ const metadata = {
     <Header
       links={[
         { text: 'Home', href: '/' },
+        { text: 'About', href: '/about' },
         { text: 'Services', href: '#services' },
         // { text: 'Testimonials', href: '#testimonials' },
         { text: 'Blog', href: '/blog' },
@@ -126,52 +126,6 @@ const metadata = {
     ]}
   />
 
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    id="experience"
-    title="Work experience"
-    items={[
-      {
-        title:
-          'Psychological Training <br /> <span class="font-normal">Personal & Psychoanalytic Studies (Part-Time)</span> <br /> <span class="text-sm font-normal">7 years</span>',
-        description: `A combination of extended group work, individual analysis, and academic study to understand human behavior and unconscious processes.`,
-        icon: 'tabler:school',
-      },
-      {
-        title:
-          'Supervisory Board Member<br /> <span class="font-normal">Subject:Resoul Organisational Development Consultancy</span> <br /> <span class="text-sm font-normal">6 years</span>',
-        description: `Supporting an award winning organisational development consultancy in a supervisory role.`,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title:
-          'Board Level Leader<br /> <span class="font-normal">Spreadshirt, Flaconi, Brandwatch, Ninox</span> <br /> <span class="text-sm font-normal">12 years</span>',
-        description: `Led Product and Design teams at multiple high-growth tech companies through significant scaling phases. Managing teams of up to 25 people. Overseeing product strategy, establishing agile, design, research and product operations.`,
-        icon: 'tabler:briefcase',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    id="education"
-    title="Education"
-    items={[
-      {
-        title: `Master of Arts Psychoanalytic Leadership & Consulting<br /> <span class="font-normal">Berlin's International Psychoanalytic University</span> <br /> <span class="text-sm font-normal">2024 - 2027</span>`,
-        icon: 'tabler:school',
-      },
-      {
-        title: `Bachelor of Arts with Honours International Business Studies<br /> <span class="font-normal">Leeds' Metropolitan University</span> <br /> <span class="text-sm font-normal">1991 - 1995</span>`,
-        icon: 'tabler:school',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
-
   <!-- Features2 Widget ************** -->
 
   <Features2
@@ -206,7 +160,11 @@ const metadata = {
         icon: 'tabler:shield-check',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-50 dark:bg-green-950/30"></div>
+    </Fragment>
+  </Features2>
 
   <!-- Content Widget **************** Service 1 -->
 
