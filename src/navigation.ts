@@ -35,7 +35,7 @@ export const footerData = {
   links: [
     {
       title: 'Services',
-      links: [{ text: 'Services', href: '#' }],
+      links: [{ text: 'Services', href: getPermalink('/#services') }],
     },
     {
       title: 'Company',
