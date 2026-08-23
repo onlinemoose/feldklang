@@ -24,7 +24,18 @@ import brandwatchLogo from '~/assets/images/logos/brandwatch.png';
 import ipuBerlinLogo from '~/assets/images/logos/ipu-berlin.svg';
 
 const metadata = {
-  title: 'Feldklang - Markus Smet Psychoanalytic Leadership & Organisational Development',
+  title: 'Feldklang - Markus Smet Getting You To Lead Ambitious Teams',
+  description:
+    'Get ahead by attending to the human dynamics of ambitious work: coaching, supervision and organisational development with Markus Smet.',
+  openGraph: {
+    images: [
+      {
+        url: '~/assets/images/home-og.png',
+        width: 1200,
+        height: 628,
+      },
+    ],
+  },
 };
 ---
 
@@ -55,7 +66,7 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Build An Ambitous Mindset"
+    title="Build An Ambitious Mindset"
     tagline=""
     actions={[{ variant: 'primary', text: 'Why?', href: '#mindset' }]}
   >
@@ -131,7 +142,7 @@ const metadata = {
   <Features2
     id="how"
     title="How To Shape People's Experience of Work"
-    subtitle="You can do many things to help a team think for themselves. But for it to stick, so you don't have to keep pushing, this is how to grow curiosity, courage and trust. "
+    subtitle="You can do many things to help a team think for themselves. But for it to stick, so you don't have to keep pushing, this is how. "
     tagline="Ambition"
     columns={4}
     items={[
