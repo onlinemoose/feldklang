@@ -29,7 +29,11 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      // Keep the booking page out of the generated sitemap — it's meant to be
+      // reachable from the site's own nav only, not discovered by crawlers.
+      filter: (page) => !page.includes('/book-exploratory-call'),
+    }),
     mdx(),
     icon({
       include: {

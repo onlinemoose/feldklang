@@ -1,0 +1,49 @@
+---
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
+
+export interface Props extends Widget {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+
+  <div
+    class="flex flex-col max-w-4xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow p-4 sm:p-6 lg:p-8 w-full"
+  >
+    <!-- Koalendar Inline Embed Start -->
+    <div id="inline-widget-coaching-to-build-ambitious-teams"></div>
+    <script is:inline>
+      window.Koalendar =
+        window.Koalendar ||
+        function () {
+          // eslint-disable-next-line prefer-rest-params -- vendor snippet, kept verbatim
+          (Koalendar.props = Koalendar.props || []).push(arguments);
+        };
+    </script>
+    <script is:inline async src="https://koalendar.com/assets/widget.js"></script>
+    <script is:inline>
+      Koalendar('inline', {
+        url: 'https://koalendar.com/e/coaching-to-build-ambitious-teams',
+        selector: '#inline-widget-coaching-to-build-ambitious-teams',
+      });
+    </script>
+    <!-- Koalendar Inline Embed End -->
+  </div>
+</WidgetWrapper>

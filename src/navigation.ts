@@ -22,7 +22,11 @@ export const headerData = {
   actions: [
     {
       text: 'Book a call',
-      href: '#',
+      href: getPermalink('/book-exploratory-call'),
+      // The booking page embeds a third-party scheduling widget whose scripts
+      // are unreliable when swapped in via Astro's client-side view
+      // transitions — force a full page load so they run cleanly every time.
+      'data-astro-reload': true,
     },
   ],
 };

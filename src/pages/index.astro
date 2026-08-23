@@ -42,7 +42,9 @@ const metadata = {
       actions={[
         {
           text: 'Book a call',
-          href: '#',
+          href: '/book-exploratory-call',
+          // See navigation.ts for why this forces a full page load.
+          'data-astro-reload': true,
         },
       ]}
       isSticky
@@ -91,15 +93,15 @@ const metadata = {
         Over time I noticed my greatest career successes were not about the tangible processes, structures or strategy.
       </p>
       <br />
-      <p>
-        Success, and failure, amplifies when the dynamics between people work well, or poorly.
-      </p>
+      <p>Success, and failure, amplifies when the dynamics between people work well, or poorly.</p>
       <br />
       <p class="mb-6">
-        So shaping <b><i>people's experience of work</i></b> became my focus
-        because I wanted to know how this worked, and how to do it better.
+        So shaping <b><i>people's experience of work</i></b> became my focus because I wanted to know how this worked, and
+        how to do it better.
       </p>
-      <div class="max-w-xs sm:max-w-md mx-auto md:mx-0 flex flex-nowrap flex-col sm:flex-row justify-center md:justify-start">
+      <div
+        class="max-w-xs sm:max-w-md mx-auto md:mx-0 flex flex-nowrap flex-col sm:flex-row justify-center md:justify-start"
+      >
         <div class="flex w-full sm:w-auto">
           <Button variant="primary" text="How?" href="#how" class="w-full sm:mb-0" />
         </div>
@@ -181,22 +183,26 @@ const metadata = {
     items={[
       {
         title: 'Align On Primary Task',
-        description: 'Clarity takes much longer than expected, early ideas and KPIs are often wrong. Keep the primary task in dialogue, this is not a one-time exercise.',
+        description:
+          'Clarity takes much longer than expected, early ideas and KPIs are often wrong. Keep the primary task in dialogue, this is not a one-time exercise.',
         icon: 'tabler:target-arrow',
       },
       {
         title: 'Entrust Role Holders',
-        description: 'More than a job description, a holder must mentally inhabit a profession, separate from their personal identity, and roles are equally supported by the team.',
+        description:
+          'More than a job description, a holder must mentally inhabit a profession, separate from their personal identity, and roles are equally supported by the team.',
         icon: 'tabler:users-group',
       },
       {
         title: 'Uphold Lively Discourse',
-        description: 'Build constructive behaviour that uses and tolerates plainly spoken truths over avoidance or threats, to help people process the tension of ambition.',
+        description:
+          'Build constructive behaviour that uses and tolerates plainly spoken truths over avoidance or threats, to help people process the tension of ambition.',
         icon: 'tabler:messages',
       },
       {
         title: 'Be A Brave Leader',
-        description: 'Work to stay on the same page, share struggles, listen and use power constructively. Why? To lower defensive behaviours, creating space for clarity.',
+        description:
+          'Work to stay on the same page, share struggles, listen and use power constructively. Why? To lower defensive behaviours, creating space for clarity.',
         icon: 'tabler:shield-check',
       },
     ]}
@@ -213,7 +219,8 @@ const metadata = {
       {
         title: 'Why Do It:',
         icon: 'tabler:user',
-        description: 'Leading is complex, driving change and innovation is even more so. To be lead ambitiously without the downsides, you need to understand your own mindset and motivations.',
+        description:
+          'Leading is complex, driving change and innovation is even more so. To be lead ambitiously without the downsides, you need to understand your own mindset and motivations.',
       },
       {
         title: 'How It Works:',
@@ -338,7 +345,8 @@ const metadata = {
       {
         title: 'Why Do It:',
         icon: 'tabler:user',
-        description: 'Leaders seeking to strengthen organisational capability to process unwelcome customer truths that challenge and evolve the organisation.',
+        description:
+          'Leaders seeking to strengthen organisational capability to process unwelcome customer truths that challenge and evolve the organisation.',
       },
       {
         title: 'How It Works:',
@@ -417,7 +425,9 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Book a call',
-        href: '/',
+        href: '/book-exploratory-call',
+        // See navigation.ts for why this forces a full page load.
+        'data-astro-reload': true,
       },
     ]}
   />
