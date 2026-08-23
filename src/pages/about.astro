@@ -1,4 +1,5 @@
 ---
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -83,4 +84,24 @@ const metadata = {
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Build An Ambitious Mindset"
+    subtitle="For a mindset that goes beyond normal, let's talk."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a call',
+        href: '/book-exploratory-call',
+        // See navigation.ts for why this forces a full page load.
+        'data-astro-reload': true,
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-page-2 dark:bg-transparent"></div>
+    </Fragment>
+  </CallToAction>
 </Layout>
