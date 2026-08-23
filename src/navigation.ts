@@ -12,7 +12,7 @@ export const headerData = {
     },
     {
       text: 'Services',
-      href: getPermalink('/#services'),
+      href: getPermalink('/services'),
     },
     //    {
     //      text: 'Testimonials',
@@ -39,7 +39,7 @@ export const footerData = {
   links: [
     {
       title: 'Services',
-      links: [{ text: 'Services', href: getPermalink('/#services') }],
+      links: [{ text: 'Services', href: getPermalink('/services') }],
     },
     {
       title: 'Company',

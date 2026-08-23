@@ -1,10 +1,11 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import workCounsellingImage from '~/assets/images/work_counselling.jpg';
+import groupSupervisionImage from '~/assets/images/group_supervision.jpg';
+import organisationalDevelopmentImage from '~/assets/images/organisational_development.jpg';
+import organisationalDisturbanceImage from '~/assets/images/organisational_disturbance.jpg';
 
 const metadata = {
   title: 'Services',
@@ -16,209 +17,184 @@ const metadata = {
 
   <Hero
     tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+    title="Services That Shape People's Experience of Work"
+    subtitle="Coaching, supervision and organisational development that attend to the human dynamics of ambitious work."
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
+      alt: 'Team collaborating at work',
     }}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
-    columns={3}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-        icon: 'tabler:home-star',
-      },
-      {
-        title: 'Photography',
-        description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-        icon: 'tabler:photo',
-      },
-      {
-        title: 'E-commerce',
-        description:
-          'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-        icon: 'tabler:shopping-cart',
-      },
-      {
-        title: 'Blog',
-        description:
-          'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-        icon: 'tabler:article',
-      },
-      {
-        title: 'Business',
-        description:
-          'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-        icon: 'tabler:building-store',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-        icon: 'tabler:arrow-big-up-lines',
-      },
-      {
-        title: 'Medical',
-        description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-        icon: 'tabler:vaccine',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-        icon: 'tabler:tie',
-      },
-    ]}
-  />
-
-  <!-- Content Widget **************** -->
+  <!-- Content Widget **************** Service 1 -->
 
   <Content
+    id="services"
+    title="Services"
+    subtitle="Organisational consulting attending to the mindset of ambitious work"
     isReversed
     items={[
       {
-        title: 'High-Quality Designs',
+        title: 'Why Do It:',
+        icon: 'tabler:user',
         description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
+          'Leading is complex, driving change and innovation is even more so. To be lead ambitiously without the downsides, you need to understand your own mindset and motivations.',
       },
       {
-        title: 'Customization Tools',
+        title: 'How It Works:',
+        icon: 'tabler:settings-question',
         description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
+          "To leverage your potential, we explore not just what others are doing but also your impact on ambition. Gentle but honest exploration, room for you to find thoughts you haven't found words for until now. The reasons for hesitation or resistance will emerge and we will find concrete actions worth taking.",
       },
       {
-        title: 'Pre-Designed Elements',
+        title: 'Format:',
+        icon: 'tabler:question-mark',
         description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
-      },
-      {
-        title: 'Preview and Mockup Views',
-        description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
+          'One to one sessions, 60 minutes every 2-4 weeks to give time for thoughts to digest. Can be in person or remote depending on location.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
+      src: workCounsellingImage,
+      alt: 'Leadership Coaching',
     }}
+    imageClasses="image-blur-diagonal"
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
+      <h3 class="text-2xl font-bold tracking-tight font-heading dark:text-white sm:text-3xl mb-2">
+        Individual Leadership Coaching<br /><span class="text-2xl font-sans font-normal">For Leading Ambitiously</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-page-2 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widget **************** Service 2 -->
 
   <Content
-    isAfterContent
+    id="group-supervision"
+    isReversed
     items={[
       {
-        title: 'Time Savings',
+        title: 'Why Do It:',
+        icon: 'tabler:user',
         description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
+          'To create performance and build trust. Learn to speak plainly, collaborate better and develop more effective behavioural patterns in your team.',
       },
       {
-        title: 'Professional Appearance',
+        title: 'How It Works:',
+        icon: 'tabler:settings-question',
         description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
+          'Supervising a group means attending to the inter-personal dynamics so that learning from each other accelerates through constructive conflict, courage and inter-personal trust.',
       },
       {
-        title: 'Cost-Efficiency',
+        title: 'Format:',
+        icon: 'tabler:question-mark',
         description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
-      },
-      {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
+          "Typically conducted in small groups with others facing similar demands. Commitment to 6 sessions over 6 months builds trust. You learn from each other's experience whilst developing genuine insight into your own practice.",
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
+      src: groupSupervisionImage,
+      alt: 'Group Supervision',
     }}
+    imageClasses="image-blur-diagonal"
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+      <h3 class="text-2xl font-bold tracking-tight font-heading dark:text-white sm:text-3xl mb-2">
+        Group Supervision<br /><span class="text-2xl font-sans font-normal">Activate Teams So They Come Together</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-page-2 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Testimonials Widget *********** -->
+  <!-- Content Widget **************** Service 3 -->
 
-  <Testimonials
-    title="Words from real customers"
-    testimonials={[
+  <Content
+    id="org-development"
+    isReversed
+    items={[
       {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
-        },
+        title: 'Why Do It:',
+        icon: 'tabler:user',
+        description:
+          'Proactively preempt problems, set up teams to work well together and build up a healthy organisational mindset.',
       },
       {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
-        name: 'Sarah Hansen',
-        job: 'Photographer',
-        image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
-        },
+        title: 'How It Works:',
+        icon: 'tabler:settings-question',
+        description:
+          'With interviews and observing the organisation at work patterns of anxiety, defenciveness and avoidance between teams, individuals, and leaders becomes visible. Combined with Supervision and Coaching, we can clarify company goals and see how values are upheld in teams.',
       },
       {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
-        name: 'Mark Wilkinson',
-        job: 'Small business owner',
-        image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
-        },
+        title: 'Format:',
+        icon: 'tabler:question-mark',
+        description:
+          '3 month engagement with 4 days p/month, starts with a 1 week assessment where initial issues are shared and focus is prioritised.',
       },
     ]}
-    callToAction={{
-      target: '_blank',
-      text: 'More testimonials...',
-      href: 'https://github.com/arthelokyo/astrowind',
-      icon: 'tabler:chevron-right',
+    image={{
+      src: organisationalDevelopmentImage,
+      alt: 'Organisational Development',
     }}
-  />
+    imageClasses="image-blur-diagonal-line"
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight font-heading dark:text-white sm:text-3xl mb-2">
+        Organisational Development<br /><span class="text-2xl font-sans font-normal"
+          >Growing Organisational Ambition</span
+        >
+      </h3>
+    </Fragment>
 
-  <!-- CallToAction Widget *********** -->
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-page-2 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
-  <CallToAction
-    actions={[
+  <!-- Content Widget **************** Service 4 -->
+
+  <Content
+    id="org-disruption"
+    isReversed
+    items={[
       {
-        variant: 'primary',
-        text: 'Start exploring',
-        href: '/',
+        title: 'Why Do It:',
+        icon: 'tabler:user',
+        description:
+          'Leaders seeking to strengthen organisational capability to process unwelcome customer truths that challenge and evolve the organisation.',
+      },
+      {
+        title: 'How It Works:',
+        icon: 'tabler:settings-question',
+        description:
+          'Individual and leadership team coaching to uncover risks and establish a clear goal. Build clear responsibilities to identify customer problems and bring them into the organisation. Provide group supervision for the team as they question established practice and push back on comfortable assumptions.',
+      },
+      {
+        title: 'Format:',
+        icon: 'tabler:question-mark',
+        description: 'Initially onsite, follow up work and supervision possible remotely.',
       },
     ]}
-    title="Dive into our template collection"
-    subtitle="Whether you're in business, design, or education, our templates are here to elevate your projects."
-  />
+    image={{
+      src: organisationalDisturbanceImage,
+      alt: 'Customer Led Innovation',
+    }}
+    imageClasses="image-blur-diagonal"
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight font-heading dark:text-white sm:text-3xl mb-2">
+        Customer-Led Innovation<br /><span class="text-2xl font-sans font-normal"
+          >Bring the outside-in to the Organisation</span
+        >
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-page-2 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 </Layout>

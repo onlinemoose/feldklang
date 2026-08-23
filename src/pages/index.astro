@@ -14,10 +14,6 @@ import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
 import heroImage from '~/assets/images/human-dynamics-hero.png';
 import aboutPhoto from '~/assets/images/markus-smet.jpg';
-import workCounsellingImage from '~/assets/images/work_counselling.jpg';
-import groupSupervisionImage from '~/assets/images/group_supervision.jpg';
-import organisationalDevelopmentImage from '~/assets/images/organisational_development.jpg';
-import organisationalDisturbanceImage from '~/assets/images/organisational_disturbance.jpg';
 import yellLogo from '~/assets/images/logos/yell.svg';
 import skyLogo from '~/assets/images/logos/sky.svg';
 import brandwatchLogo from '~/assets/images/logos/brandwatch.png';
@@ -46,7 +42,7 @@ const metadata = {
       links={[
         { text: 'Home', href: '/' },
         { text: 'About', href: '/about' },
-        { text: 'Services', href: '#services' },
+        { text: 'Services', href: '/services' },
         // { text: 'Testimonials', href: '#testimonials' },
         { text: 'Blog', href: '/blog' },
       ]}
@@ -179,180 +175,7 @@ const metadata = {
     </Fragment>
   </Features2>
 
-  <!-- Content Widget **************** Service 1 -->
-
-  <Content
-    id="services"
-    title="Services"
-    subtitle="Organisational consulting attending to the mindset of ambitious work"
-    isReversed
-    items={[
-      {
-        title: 'Why Do It:',
-        icon: 'tabler:user',
-        description:
-          'Leading is complex, driving change and innovation is even more so. To be lead ambitiously without the downsides, you need to understand your own mindset and motivations.',
-      },
-      {
-        title: 'How It Works:',
-        icon: 'tabler:settings-question',
-        description:
-          "To leverage your potential, we explore not just what others are doing but also your impact on ambition. Gentle but honest exploration, room for you to find thoughts you haven't found words for until now. The reasons for hesitation or resistance will emerge and we will find concrete actions worth taking.",
-      },
-      {
-        title: 'Format:',
-        icon: 'tabler:question-mark',
-        description:
-          'One to one sessions, 60 minutes every 2-4 weeks to give time for thoughts to digest. Can be in person or remote depending on location.',
-      },
-    ]}
-    image={{
-      src: workCounsellingImage,
-      alt: 'Coaching and Counselling',
-    }}
-    imageClasses="image-blur-diagonal"
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight font-heading dark:text-white sm:text-3xl mb-2">
-        Leadership Coaching<br /><span class="text-2xl font-sans font-normal">For Leading Ambitiously</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-page-2 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** Service 2 -->
-
-  <Content
-    id="group-supervision"
-    isReversed
-    items={[
-      {
-        title: 'Why Do It:',
-        icon: 'tabler:user',
-        description:
-          'To create performance and build trust. Learn to speak plainly, collaborate better and develop more effective behavioural patterns in your team.',
-      },
-      {
-        title: 'How It Works:',
-        icon: 'tabler:settings-question',
-        description:
-          'Supervising a group means attending to the inter-personal dynamics so that learning from each other accelerates through constructive conflict, courage and inter-personal trust.',
-      },
-      {
-        title: 'Format:',
-        icon: 'tabler:question-mark',
-        description:
-          "Typically conducted in small groups with others facing similar demands. Commitment to 6 sessions over 6 months builds trust. You learn from each other's experience whilst developing genuine insight into your own practice.",
-      },
-    ]}
-    image={{
-      src: groupSupervisionImage,
-      alt: 'Supervision',
-    }}
-    imageClasses="image-blur-diagonal"
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight font-heading dark:text-white sm:text-3xl mb-2">
-        Supervision<br /><span class="text-2xl font-sans font-normal">Activate Teams So They Come Together</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-page-2 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** Service 3 -->
-
-  <Content
-    id="org-development"
-    isReversed
-    items={[
-      {
-        title: 'Why Do It:',
-        icon: 'tabler:user',
-        description:
-          'Proactively preempt problems, set up teams to work well together and build up a healthy organisational mindset.',
-      },
-      {
-        title: 'How It Works:',
-        icon: 'tabler:settings-question',
-        description:
-          'With interviews and observing the organisation at work patterns of anxiety, defenciveness and avoidance between teams, individuals, and leaders becomes visible. Combined with Supervision and Coaching, we can clarify company goals and see how values are upheld in teams.',
-      },
-      {
-        title: 'Format:',
-        icon: 'tabler:question-mark',
-        description:
-          '3 month engagement with 4 days p/month, starts with a 1 week assessment where initial issues are shared and focus is prioritised.',
-      },
-    ]}
-    image={{
-      src: organisationalDevelopmentImage,
-      alt: 'Organisational Development',
-    }}
-    imageClasses="image-blur-diagonal-line"
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight font-heading dark:text-white sm:text-3xl mb-2">
-        Organisational Development<br /><span class="text-2xl font-sans font-normal"
-          >Growing Organisational Ambition</span
-        >
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-page-2 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** Service 4 -->
-
-  <Content
-    id="org-disruption"
-    isReversed
-    items={[
-      {
-        title: 'Why Do It:',
-        icon: 'tabler:user',
-        description:
-          'Leaders seeking to strengthen organisational capability to process unwelcome customer truths that challenge and evolve the organisation.',
-      },
-      {
-        title: 'How It Works:',
-        icon: 'tabler:settings-question',
-        description:
-          'Individual and leadership team coaching to uncover risks and establish a clear goal. Build clear responsibilities to identify customer problems and bring them into the organisation. Provide group supervision for the team as they question established practice and push back on comfortable assumptions.',
-      },
-      {
-        title: 'Format:',
-        icon: 'tabler:question-mark',
-        description: 'Initially onsite, follow up work and supervision possible remotely.',
-      },
-    ]}
-    image={{
-      src: organisationalDisturbanceImage,
-      alt: 'Customer Led Innovation',
-    }}
-    imageClasses="image-blur-diagonal"
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight font-heading dark:text-white sm:text-3xl mb-2">
-        Customer-Led Innovation<br /><span class="text-2xl font-sans font-normal"
-          >Bring the outside-in to the Organisation</span
-        >
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-page-2 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Testimonials Widget *********** 
+  <!-- Testimonials Widget ***********
 
   <Testimonials
     id="testimonials"
