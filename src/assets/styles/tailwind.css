@@ -50,6 +50,10 @@
   @apply bg-page md:bg-[#1b1712e6] border-b border-gray-500/20;
   box-shadow: none;
 }
+
+#header.scroll .btn-secondary {
+  @apply bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+}
 /* #header.scroll > div:last-child {
   @apply py-3;
 } */
